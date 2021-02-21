@@ -4,7 +4,6 @@ import (
 	"errors"
 	"path"
 	"strings"
-	"sync"
 )
 
 var (
@@ -12,19 +11,17 @@ var (
 	ErrDuplicate = errors.New("ErrDuplicate")
 )
 
-type Root struct {
-	node
-	rwmu sync.RWMutex
+type Root node
+
+func New() Root {
+	return Root{branch: make(branch, 0)}
 }
 
 func (r *Root) Put(s string, v interface{}) error {
-	r.rwmu.Lock()
-	defer r.rwmu.Unlock()
-
 	s = strings.TrimSpace(s)
 	s = path.Clean(s)
 	ss := strings.Split(s, "/")
-	tmp := &r.node
+	tmp := interface{}(r).(*node)
 	for _, each := range ss {
 		next, ok := tmp.branch.get(each)
 		if !ok {
@@ -42,13 +39,10 @@ func (r *Root) Put(s string, v interface{}) error {
 }
 
 func (r *Root) Get(s string) (interface{}, error) {
-	r.rwmu.RLock()
-	defer r.rwmu.RUnlock()
-
 	s = strings.TrimSpace(s)
 	s = path.Clean(s)
 	ss := strings.Split(s, "/")
-	tmp := &r.node
+	tmp := interface{}(r).(*node)
 	for _, each := range ss {
 		next, ok := tmp.branch.get(each)
 		if !ok {

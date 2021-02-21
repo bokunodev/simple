@@ -2,8 +2,6 @@ package trie
 
 import (
 	"errors"
-	"path"
-	"strings"
 )
 
 var (
@@ -11,50 +9,18 @@ var (
 	ErrDuplicate = errors.New("ErrDuplicate")
 )
 
-type Root struct {
-	node
-}
+type Root struct{ *node }
+
+func New() Root { return Root{&node{branch: make(branch, 0)}} }
 
 func (r *Root) Put(s string, v interface{}) error {
-	s = strings.TrimSpace(s)
-	s = path.Clean(s)
-	ss := strings.Split(s, "/")
-	tmp := &r.node
-	for _, each := range ss {
-		next, ok := tmp.branch.get(each)
-		if !ok {
-			next = &node{path: each}
-			tmp.branch = append(tmp.branch, next)
-		}
-		tmp = next
+	if r.node.branch == nil {
+		r.node.branch = branch{&node{path: s}}
+		r.node.leaf = true
+		r.node.value = v
+		return nil
 	}
-	if tmp.leaf {
-		return ErrDuplicate
-	}
-	tmp.leaf = true
-	tmp.value = v
-	return nil
-}
-
-func (r *Root) Get(s string) (interface{}, error) {
-	s = strings.TrimSpace(s)
-	s = path.Clean(s)
-	ss := strings.Split(s, "/")
-	tmp := &r.node
-	for _, each := range ss {
-		next, ok := tmp.branch.get(each)
-		if !ok {
-			next, ok = tmp.branch.get("*")
-			if !ok {
-				return nil, ErrNotFound
-			}
-		}
-		tmp = next
-	}
-	if !tmp.leaf {
-		return nil, ErrNotFound
-	}
-	return tmp.value, nil
+	return r.node.put(s, v)
 }
 
 type node struct {
@@ -64,16 +30,18 @@ type node struct {
 	leaf   bool
 }
 
-type branch []*node
-
-func (b branch) get(s string) (*node, bool) {
-	for _, each := range b {
-		if each.path == s {
-			return each, true
+func (n *node) put(s string, v interface{}) error {
+	var tmp *node
+	for _, v := range n.branch {
+		if dif := compare(v.path, s); dif != 0 {
+			tmp = v
 		}
 	}
-	return nil, false
+
+	return nil
 }
+
+type branch []*node
 
 func compare(s1, s2 string) int {
 	if len(s1) > len(s2) {
