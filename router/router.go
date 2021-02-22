@@ -10,7 +10,7 @@ import (
 
 type Router struct {
 	re              *regexp.Regexp
-	pattern         strings.Builder
+	paths           strings.Builder
 	NotFoundHandler http.HandlerFunc
 	handlers        map[string]http.Handler
 	counter         int
@@ -21,16 +21,16 @@ func New() *Router {
 }
 
 func (r *Router) Route(path string, handler http.Handler) {
-	if r.pattern.Len() > 0 {
-		r.pattern.Write([]byte{'|'})
+	if r.paths.Len() > 0 {
+		r.paths.Write([]byte{'|'})
 	}
-	fmt.Fprintf(&r.pattern, "(?P<%d>%s)", r.counter, path)
+	fmt.Fprintf(&r.paths, "(?P<%d>%s)", r.counter, path)
 	r.handlers[strconv.Itoa(r.counter)] = handler
 	r.counter++
 }
 
 func (r *Router) Compile() http.Handler {
-	r.re = regexp.MustCompile("^(?:" + r.pattern.String() + ")$")
+	r.re = regexp.MustCompile("^(?:" + r.paths.String() + ")$")
 	return http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
 		match := r.re.FindStringSubmatch(req.URL.Path)
 		if len(match) == 0 {

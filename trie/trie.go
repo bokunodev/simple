@@ -31,13 +31,6 @@ type node struct {
 }
 
 func (n *node) put(s string, v interface{}) error {
-	var tmp *node
-	for _, v := range n.branch {
-		if dif := compare(v.path, s); dif != 0 {
-			tmp = v
-		}
-	}
-
 	return nil
 }
 
