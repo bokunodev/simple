@@ -3,7 +3,6 @@ package gzip
 import (
 	"compress/gzip"
 	"io"
-	"net/http"
 	"sync"
 )
 
@@ -28,8 +27,3 @@ Accept-Encoding: br
 Accept-Encoding: identity
 Accept-Encoding: *
 */
-type FileServer struct{ http.FileSystem }
-
-func (fs *FileServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-
-}
