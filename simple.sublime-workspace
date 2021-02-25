@@ -1,0 +1,958 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"T",
+				"TraceProfile\t  func(p *profile.Profile)"
+			],
+			[
+				"C",
+				"CPUProfile\t  func(p *profile.Profile)"
+			],
+			[
+				"S",
+				"String\t  func() string"
+			],
+			[
+				"W",
+				"Write\t  func([]byte) (int, error)"
+			],
+			[
+				"Han",
+				"HandlerFunc\t  func(http.ResponseWriter, *http.Request) (from \"net/http\")"
+			],
+			[
+				"Set",
+				"SetOutput\t  func(w io.Writer)"
+			],
+			[
+				"F",
+				"Flags\t  func() int"
+			],
+			[
+				"N",
+				"New\t  func(out io.Writer, prefix string, flag int) *log.Logger"
+			],
+			[
+				"Me",
+				"MemProfileHeap\t  func(p *profile.Profile)"
+			],
+			[
+				"byte",
+				"bytes\t  \"bytes\""
+			],
+			[
+				"stri",
+				"string\t  Class"
+			],
+			[
+				"P",
+				"ProfilePath\t  func(path string) func(*Profile)"
+			],
+			[
+				"Mem",
+				"MemProfileAllocs\t  func(p *profile.Profile)"
+			],
+			[
+				"str",
+				"strconv\t  \"strconv\""
+			],
+			[
+				"bytes",
+				"bytes.Buffer\t  struct{...} (from \"bytes\")"
+			],
+			[
+				"re",
+				"req\t  *http.Request"
+			],
+			[
+				"Pr",
+				"Printf\t  func(format string, a ...interface{}) (n int, err error)"
+			],
+			[
+				"StatusNo",
+				"StatusNotFound\t  int"
+			],
+			[
+				"Pri",
+				"Println\t  func(v ...interface{}) (from \"log\")"
+			],
+			[
+				"r",
+				"r\t  *router.Router"
+			],
+			[
+				"Co",
+				"Compile\t  func()"
+			],
+			[
+				"Meth",
+				"MethodGet\t  string (from \"net/http\")"
+			],
+			[
+				"R",
+				"Route\t  func(m string, s string, h http.Handler)"
+			],
+			[
+				"Res",
+				"ResponseWriter\t  interface{...}"
+			],
+			[
+				"pa",
+				"pattern"
+			],
+			[
+				"rege",
+				"regexp.MustCompile\t  func(str string) *regexp.Regexp"
+			],
+			[
+				"Spr",
+				"Sprintf\t  func(format string, a ...interface{}) string (from \"fmt\")"
+			],
+			[
+				"def",
+				"defer\t  Keyword"
+			],
+			[
+				"mu",
+				"mu.Lock\t  func()"
+			],
+			[
+				"s",
+				"string\t  Class"
+			],
+			[
+				"regexp",
+				"regexp.Regexp\t  struct{...}"
+			],
+			[
+				"Router",
+				"router"
+			],
+			[
+				"pac",
+				"package router\t  Module"
+			],
+			[
+				"fo",
+				"for\t  Keyword"
+			],
+			[
+				"for",
+				"format\t  \"mvdan.cc/gofumpt/format\""
+			],
+			[
+				"b",
+				"branch = append(n.branch, )\t  Function"
+			],
+			[
+				"Er",
+				"ErrDuplicate\t  error"
+			],
+			[
+				"tmp",
+				"tmp\t  *node"
+			],
+			[
+				"v",
+				"value\t  interface{}"
+			],
+			[
+				"Put",
+				"put\t  func(s string, v interface{}) (*node, bool)"
+			],
+			[
+				"Con",
+				"continue"
+			],
+			[
+				"de",
+				"defaultLogFlags\t  int"
+			],
+			[
+				"Ls",
+				"LstdFlags\t  int"
+			],
+			[
+				"Lo",
+				"LoggerOption"
+			],
+			[
+				"htt",
+				"http.Server{}\t  Variable"
+			],
+			[
+				"Ser",
+				"Server{}\t  Variable"
+			],
+			[
+				"log",
+				"log.Logger\t  struct{...} (from \"log\")"
+			],
+			[
+				"br",
+				"branch = append(tmp.branch, )\t  Function"
+			],
+			[
+				"Di",
+				"Duration"
+			],
+			[
+				"TLS",
+				"TLSConfigModern\t  TLSVersion"
+			],
+			[
+				"mai",
+				"main_loop\t  label"
+			],
+			[
+				"int",
+				"int64()\t  int64"
+			],
+			[
+				"ma",
+				"main_loop\t  label"
+			],
+			[
+				"res",
+				"res2.Body\t  io.ReadCloser"
+			],
+			[
+				"er",
+				"err\t  error"
+			],
+			[
+				"mi",
+				"minResSize\t  float64"
+			],
+			[
+				"Bo",
+				"Body.Close\t  func() error"
+			],
+			[
+				"tr",
+				"tree\t  \"local.pc/simple/tree\""
+			],
+			[
+				"rw",
+				"rwmu.RLock\t  func()"
+			],
+			[
+				"bra",
+				"branchIdx\t  int"
+			],
+			[
+				"Err",
+				"ErrNotFound\t  error"
+			],
+			[
+				"err",
+				"error\t  Interface"
+			],
+			[
+				"chi",
+				"childNode{}\t  Variable"
+			],
+			[
+				"Ch",
+				"childNode\t  []*node"
+			],
+			[
+				"i",
+				"if\t  Keyword"
+			],
+			[
+				"Read",
+				"ReadLine\t  func() (line []byte, isPrefix bool, err error)"
+			],
+			[
+				"nu",
+				"NULL\t  NULL"
+			],
+			[
+				"t",
+				"toString\t  string toString()"
+			],
+			[
+				"Writ",
+				"writeBody\t  void writeBody(in ubyte[] data, string content_type = null)"
+			],
+			[
+				"std",
+				"stdprn\t  _iobuf stdprn"
+			],
+			[
+				"w",
+				"while\twhile … { … }"
+			],
+			[
+				"u",
+				"usr"
+			],
+			[
+				"No",
+				"ErrNotFound\t  error"
+			],
+			[
+				"g",
+				"get\t  func(s string) int"
+			],
+			[
+				"c",
+				"child\t  child"
+			],
+			[
+				"Print",
+				"Println\t  (from \"fmt\")"
+			],
+			[
+				"Root",
+				"Root = append(Root, )\t  Function"
+			],
+			[
+				"erro",
+				"errors\t  \"errors\""
+			],
+			[
+				"n",
+				"node"
+			],
+			[
+				"ch",
+				"child"
+			],
+			[
+				"floa",
+				"float64()\t  float64"
+			],
+			[
+				"uin",
+				"uint8()\t  uint8"
+			],
+			[
+				"diim",
+				"dim.Min.Mod\t  func(r image.Rectangle) image.Point"
+			],
+			[
+				"New",
+				"NewGray\t  func(r image.Rectangle) *image.Gray"
+			],
+			[
+				"imag",
+				"image\t  \"image\""
+			],
+			[
+				"colo",
+				"color.Gray{}\t  Variable"
+			],
+			[
+				"di",
+				"dim.Y\t  int"
+			],
+			[
+				"dim",
+				"dim.X\t  int"
+			],
+			[
+				"Fa",
+				"Fatalln\t  func(v ...interface{})"
+			],
+			[
+				"ima",
+				"image\t  \"image\""
+			],
+			[
+				"OP",
+				"Open\t  (from \"os\")"
+			],
+			[
+				"lo",
+				"logAndClose"
+			],
+			[
+				"float",
+				"float64\t  Class"
+			],
+			[
+				"Se",
+				"SEEK_SET\t  int"
+			],
+			[
+				"Sa",
+				"Status\t  string"
+			],
+			[
+				"co",
+				"continue\t  Keyword"
+			],
+			[
+				"Rs",
+				"Response\t  struct{...}"
+			],
+			[
+				"DE",
+				"DefaultHTTPClientConfig\t  share.HTTPClientConfig"
+			],
+			[
+				"sha",
+				"share\t  \"getdown/share\""
+			],
+			[
+				"Def",
+				"DefaultHTTPClientConfig\t  HTTPClientConfig"
+			],
+			[
+				"H",
+				"HTTPClientFromConfig\t  func(c HTTPClientConfig) *http.Client"
+			],
+			[
+				"HT",
+				"HTTPClientConfig{}\t  Variable"
+			],
+			[
+				"js",
+				"json\t  \"encoding/json\""
+			],
+			[
+				"HTTP",
+				"HTTPClientConfig"
+			],
+			[
+				"Mar",
+				"MarshalIndent\t  (from \"encoding/json\")"
+			],
+			[
+				"Dial",
+				"Dialer\t  struct{...} (from \"net\")"
+			],
+			[
+				"D",
+				"Dialer\t  struct{...} (from \"net\")"
+			],
+			[
+				"bye",
+				"bytes\t  \"bytes\""
+			],
+			[
+				"pack",
+				"package main\t  Module"
+			],
+			[
+				"RE",
+				"ResponseWriter\t  interface{...}"
+			],
+			[
+				"Wr",
+				"WriteHeader\t  func(statusCode int)"
+			],
+			[
+				"Rse",
+				"ResponseWriter\t  interface{...}"
+			],
+			[
+				"Ha",
+				"HandlerFunc()\t  func(net/http.ResponseWriter, *net/http.Request)"
+			],
+			[
+				"Str",
+				"String"
+			],
+			[
+				"Fi",
+				"File\t  struct{...}"
+			],
+			[
+				"f",
+				"func\t  Keyword"
+			],
+			[
+				"Sp",
+				"Sprintf\t  func(format string, a ...interface{}) string (from \"fmt\")"
+			],
+			[
+				"Wri",
+				"WriteString\t  func(s string) (int, error)"
+			],
+			[
+				"Dura",
+				"DurationVar\t  func(p *time.Duration, name string, value time.Duration, usage string)"
+			],
+			[
+				"Dua",
+				"DurationVar\t  func(p *time.Duration, name string, value time.Duration, usage string)"
+			],
+			[
+				"Ver",
+				"VersionTLS13\t  int"
+			],
+			[
+				"dl",
+				"dl.CH\t  chan *Job"
+			],
+			[
+				"Do",
+				"Downloader\t  struct{...}"
+			],
+			[
+				"File",
+				"FileInfo\t  interface{...}"
+			],
+			[
+				"Mo",
+				"ModeDir\t  fs.FileMode"
+			],
+			[
+				"info",
+				"info.Name\t  func() string"
+			],
+			[
+				"error",
+				"errors\t  \"errors\""
+			],
+			[
+				"Ma",
+				"MatchString\t  func(s string) bool"
+			]
+		]
+	},
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"re",
+				"LSP: Rename Symbol"
+			],
+			[
+				"res",
+				"LSP: Restart Servers"
+			],
+			[
+				"rena",
+				"LSP: Rename Symbol"
+			],
+			[
+				"view",
+				"View: Toggle Side Bar"
+			],
+			[
+				"file: new folder",
+				"File: New Folder Relative to Project Root"
+			],
+			[
+				"view: ",
+				"View: Toggle Side Bar"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"view:to",
+				"View: Toggle Tabs"
+			],
+			[
+				"togle",
+				"View: Toggle Tabs"
+			],
+			[
+				"view ",
+				"View: Toggle Menu"
+			],
+			[
+				"vi",
+				"View: Toggle Menu"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"set syntax plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"set syntax: go",
+				"Set Syntax: Go"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"file",
+				"File: New Folder Relative to Project Root"
+			],
+			[
+				"resta",
+				"LSP: Restart Servers"
+			],
+			[
+				"Go",
+				"Set Syntax: Go"
+			],
+			[
+				"ra",
+				"Set Syntax: SQL (Rails)"
+			],
+			[
+				"restart",
+				"LSP: Restart Servers"
+			],
+			[
+				"upgrade",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"dkit",
+				"DKit: Show Documentation"
+			],
+			[
+				"dki",
+				"DKit: Goto Definition"
+			],
+			[
+				"Dkit",
+				"DKit: Restart DCD Autocompletion Server"
+			],
+			[
+				"lsp",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"for",
+				"Fmt: Format Buffer"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"upgr",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"case",
+				"Convert Case: Lower Case"
+			],
+			[
+				"file: new",
+				"File: New Folder Relative to Project Root"
+			],
+			[
+				"align",
+				"Package Control: Install Package"
+			],
+			[
+				"ca",
+				"Convert Case: dash-case"
+			],
+			[
+				"upgra",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"rea",
+				"LSP: Rename Symbol"
+			],
+			[
+				"file: delete",
+				"File: Delete"
+			],
+			[
+				"fi",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"f",
+				"File: New Folder Relative to Project Root"
+			],
+			[
+				"ref",
+				"Side Bar: Refresh"
+			],
+			[
+				"file:nw",
+				"File: New Folder Relative to Project Root"
+			],
+			[
+				"file: new ",
+				"File: New Folder Relative to Project Root"
+			],
+			[
+				"file: new fol",
+				"File: New Folder Relative to Project Root"
+			],
+			[
+				"case: ",
+				"Convert Case: dash-case"
+			],
+			[
+				"file : new fo",
+				"File: New Folder Relative to Project Root"
+			],
+			[
+				"new",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"ren",
+				"LSP: Rename Symbol"
+			],
+			[
+				"termi",
+				"Terminal: Open in project folder"
+			],
+			[
+				"pro",
+				"Project: Save As"
+			],
+			[
+				"new il",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"file: ",
+				"File: New Folder Relative to Project Root"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"rev",
+				"Permute Lines: Reverse"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"r",
+				"Permute Lines: Reverse"
+			],
+			[
+				"rever",
+				"Permute Lines: Reverse"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"refre",
+				"Project: Refresh Folders"
+			],
+			[
+				"ter",
+				"Terminal: Open in project folder"
+			],
+			[
+				"del",
+				"DeleteCurrentFile: Delete File"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"the",
+				"UI: Select Theme"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 158.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"n.",
+			"n",
+			"\t\t\n",
+			"}\n",
+			"s[1]",
+			"short",
+			"\t\t\n",
+			"\\bs\\b"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"r.node.",
+			"r.node",
+			"b"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.diagnostics":
+	{
+		"height": 127.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.language servers":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Public/simple/simple.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 202.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

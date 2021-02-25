@@ -6,10 +6,10 @@ import (
 	"time"
 )
 
-type Server struct{ http http.Server }
+type HttpServer struct{ http http.Server }
 
-func NewHTTPServer(opts ...ServerOption) *Server {
-	s := &Server{
+func New(opts ...Option) *HttpServer {
+	s := &HttpServer{
 		http: http.Server{
 			TLSConfig:   &tls.Config{MinVersion: tls.VersionTLS13},
 			ReadTimeout: time.Second * 5,
@@ -19,47 +19,46 @@ func NewHTTPServer(opts ...ServerOption) *Server {
 			MaxHeaderBytes: 2 << 20, // 2MB
 		},
 	}
-
 	for _, opt := range opts {
 		opt(s)
 	}
 	return s
 }
 
-type ServerOption func(*Server)
+type Option func(*HttpServer)
 
-func WithMaxHeaderBytes(i uint) ServerOption {
-	return func(s *Server) { s.http.MaxHeaderBytes = int(i) }
+func WithMaxHeaderBytes(i uint) Option {
+	return func(s *HttpServer) { s.http.MaxHeaderBytes = int(i) }
 }
 
-func WithReadTimeout(t time.Duration) ServerOption {
-	return func(s *Server) { s.http.ReadTimeout = t }
+func WithReadTimeout(t time.Duration) Option {
+	return func(s *HttpServer) { s.http.ReadTimeout = t }
 }
 
-func WithReadHeaderTimeout(t time.Duration) ServerOption {
-	return func(s *Server) { s.http.ReadHeaderTimeout = t }
+func WithReadHeaderTimeout(t time.Duration) Option {
+	return func(s *HttpServer) { s.http.ReadHeaderTimeout = t }
 }
 
-func WithWriteTimeout(t time.Duration) ServerOption {
-	return func(s *Server) { s.http.WriteTimeout = t }
+func WithWriteTimeout(t time.Duration) Option {
+	return func(s *HttpServer) { s.http.WriteTimeout = t }
 }
 
-func WithIdleTimeout(t time.Duration) ServerOption {
-	return func(s *Server) { s.http.IdleTimeout = t }
+func WithIdleTimeout(t time.Duration) Option {
+	return func(s *HttpServer) { s.http.IdleTimeout = t }
 }
 
 type TLSVersion int
 
 const (
-	TlsConfigOld TLSVersion = iota
-	TlsConfigIntermediate
-	TlsConfigModern
+	TlsOld TLSVersion = iota
+	TlsIntermediate
+	TlsModern
 )
 
-func WithTLSConfig(i TLSVersion) ServerOption {
-	return func(s *Server) {
+func WithTLSConfig(i TLSVersion) Option {
+	return func(s *HttpServer) {
 		switch i {
-		case TlsConfigOld:
+		case TlsOld:
 			s.http.TLSConfig = &tls.Config{
 				MinVersion:               tls.VersionTLS10,
 				PreferServerCipherSuites: true,
@@ -84,7 +83,7 @@ func WithTLSConfig(i TLSVersion) ServerOption {
 					tls.TLS_RSA_WITH_3DES_EDE_CBC_SHA,
 				},
 			}
-		case TlsConfigIntermediate:
+		case TlsIntermediate:
 			s.http.TLSConfig = &tls.Config{
 				MinVersion: tls.VersionTLS12,
 				CipherSuites: []uint16{
@@ -96,10 +95,12 @@ func WithTLSConfig(i TLSVersion) ServerOption {
 					tls.TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,
 				},
 			}
-		case TlsConfigModern:
+		case TlsModern:
 			s.http.TLSConfig = &tls.Config{
 				MinVersion: tls.VersionTLS13,
 			}
+		default:
+			panic("invalid argument")
 		}
 	}
 }
