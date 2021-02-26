@@ -25,7 +25,17 @@ func New(opts ...Option) *HttpServer {
 	return s
 }
 
+func (s *HttpServer) Serve(addr string, handler http.Handler) error {
+	s.http.Addr = addr
+	s.http.Handler = handler
+	return s.http.ListenAndServe()
+}
+
 type Option func(*HttpServer)
+
+func WithKeepAlive(b bool) Option {
+	return func(s *HttpServer) { s.http.SetKeepAlivesEnabled(b) }
+}
 
 func WithMaxHeaderBytes(i uint) Option {
 	return func(s *HttpServer) { s.http.MaxHeaderBytes = int(i) }
